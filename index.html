@@ -29,7 +29,7 @@ a{color:inherit}
 .nav-links a:hover{color:var(--green)}
 .nav-cta{display:inline-flex;align-items:center;justify-content:center;padding:10px 17px;background:var(--green);color:#fff!important;border-radius:7px}
 .menu-toggle{display:none;border:1px solid var(--border);background:#fff;color:var(--green);border-radius:7px;padding:8px 11px;font-size:20px;cursor:pointer}
-.hero{position:relative;isolation:isolate;overflow:hidden;color:#fff;background:linear-gradient(90deg,rgba(1,35,20,.94),rgba(3,62,35,.78) 58%,rgba(3,50,29,.48)),url('images/hero.jpg') center/cover no-repeat}
+.hero{position:relative;isolation:isolate;overflow:hidden;color:#fff;background:linear-gradient(90deg,rgba(1,35,20,.94),rgba(3,62,35,.78) 58%,rgba(3,50,29,.48)),url('images/heroenm.jpg') center/cover no-repeat}
 .hero:after{content:"";position:absolute;z-index:-1;width:420px;height:420px;border:1px solid #ffffff20;border-radius:50%;right:-100px;bottom:-260px;box-shadow:0 0 0 45px #ffffff08,0 0 0 90px #ffffff06}
 .hero-inner{max-width:1180px;margin:auto;padding:82px 24px 88px}
 .hero-kicker{display:inline-flex;align-items:center;gap:9px;padding:7px 14px;border:1px solid #ffffff55;background:#ffffff16;border-radius:30px;color:#f1f7f0;font-size:11px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;margin-bottom:22px}
@@ -122,7 +122,7 @@ a{color:inherit}
  .nav-links{gap:12px}.nav-links a{font-size:11px}
  .quick-facts{grid-template-columns:repeat(2,1fr)}
  .fact:nth-child(2){border-right:0}.fact:nth-child(-n+2){border-bottom:1px solid var(--border)}
- .about-grid{gap:25px}.overview-grid{grid-template-columns:repeat(2,1fr)}
+ .-grid{gap:25px}.overview-grid{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:700px){
  .hero-heading-row{grid-template-columns:1fr;gap:25px}.hero-logos{flex-direction:row;justify-content:flex-start;flex-wrap:wrap}.hero-logos img{width:112px;height:62px}
@@ -132,7 +132,7 @@ a{color:inherit}
  .hero-inner{padding:65px 20px 76px}.hero h1{font-size:clamp(35px,9vw,49px);letter-spacing:-1px}.hero-description{font-size:14px}
  .quick-facts-wrap{padding:0 14px;margin-top:-27px}.fact{padding:15px 13px;gap:9px}.fact-icon{width:36px;height:36px;flex-basis:36px;font-size:16px}.fact-value{font-size:11px}
  .container{padding-left:18px;padding-right:18px}.section{padding:57px 0}
- .about-grid{grid-template-columns:1fr}.about-image{height:260px;order:-1}
+ .-grid{grid-template-columns:1fr}.-image{height:260px;order:-1}
  .overview-grid{grid-template-columns:1fr 1fr;gap:11px}.overview-card{padding:18px 15px}.overview-card h3{font-size:14px}
  .outcome-list{grid-template-columns:1fr}.outcomes{padding:22px 20px}
  .schedule:before{left:31px}.schedule-item{grid-template-columns:64px 1fr;gap:12px}.day-marker{width:64px;height:64px}
@@ -232,7 +232,7 @@ h1,h2,h3,h4,.fact-value,.nav-links a,.btn,.hero-kicker,.eyebrow,.section-heading
   <div class="container">
     <div class="about-grid">
       <div>
-        <p class="eyebrow">About the event</p>
+        <p class="eyebrow"></p>
         <h2 class="section-title">About the Course</h2>
         <p class="body-copy">Ecological Niche Modelling (ENM) is an important approach in ecology and biodiversity research. It uses species occurrence records and environmental variables to identify areas with suitable environmental conditions for a species. These models support the study of species distributions, habitat suitability, potential range shifts and ecological responses to environmental change.</p>
         <p class="body-copy">This five-day hybrid certificate course introduces participants to the concepts, datasets and analytical workflow involved in ecological niche modelling using MaxEnt. The programme is designed to connect ecological understanding with geospatial data processing and model interpretation.</p>
@@ -430,12 +430,12 @@ h1,h2,h3,h4,.fact-value,.nav-links a,.btn,.hero-kicker,.eyebrow,.section-heading
       <article class="organisation-card">
         <div class="org-head"><img class="org-logo" src="images/logo.png" alt="TBARC logo"><div><h3>Tropical Biodiversity Action and Research Centre</h3><span>Organiser · TBARC India</span></div></div>
         <p>Tropical Biodiversity Action and Research Centre (TBARC) is an organisation working to promote biodiversity research, conservation awareness and scientific engagement. Through training programmes, workshops, research initiatives and outreach activities, TBARC aims to connect students, researchers and communities with emerging themes and methods in biodiversity science.</p>
-        <a class="org-link" href="https://tbarc.in" target="_blank" rel="noopener">Visit TBARC website ↗</a>
+        <a class="org-link" href="https://tbarc.in" target="_blank" rel="noopener">tbarc.in ↗</a>
       </article>
       <article class="organisation-card">
         <div class="org-head"><img class="org-logo" src="images/unitylogo.png" alt="Unity Women's College logo"><div><h3>KAHM Unity Women's College</h3><span>Academic partner · Manjeri, Kerala</span></div></div>
         <p>KAHM Unity Women's College, Manjeri, is the academic institution associated with this programme. Add the approved institutional profile here, including its academic departments, research activities and facilities relevant to the course.</p>
-        <a class="org-link" href="#" target="_blank" rel="noopener">College website link to be added ↗</a>
+        <a class="org-link" href="https://unitywomenscollege.ac.in/" target="_blank" rel="noopener">unitywomenscollege.ac.in ↗</a>
       </article>
     </div>
   </div>
