@@ -205,6 +205,22 @@ h1,h2,h3,h4,.fact-value,.nav-links a,.btn,.hero-kicker,.eyebrow,.section-heading
 .overview-icon .course-icon{width:23px;height:23px}
 .fact-icon,.overview-icon{line-height:0}
 
+
+/* Floating back-to-top button */
+.back-to-top{
+  position:fixed;right:22px;bottom:22px;z-index:150;
+  width:48px;height:48px;display:flex;align-items:center;justify-content:center;
+  border:0;border-radius:50%;background:var(--green);color:#fff;
+  box-shadow:0 5px 18px rgba(4,59,37,.24);cursor:pointer;
+  opacity:0;visibility:hidden;pointer-events:none;
+  transform:translateY(10px);transition:opacity .25s ease,transform .25s ease,background .2s ease,visibility .25s;
+}
+.back-to-top.visible{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.back-to-top:hover{background:var(--dark);transform:translateY(-3px)}
+.back-to-top:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+.back-to-top svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+@media(max-width:700px){.back-to-top{right:16px;bottom:16px;width:44px;height:44px}}
+
 </style>
 </head>
 <body>
@@ -479,6 +495,11 @@ h1,h2,h3,h4,.fact-value,.nav-links a,.btn,.hero-kicker,.eyebrow,.section-heading
   </div>
   <div class="footer-bottom"><p>© 2026 Tropical Biodiversity Action and Research Centre. All rights reserved.</p></div>
 </footer>
+
+<button class="back-to-top" id="backToTop" type="button" aria-label="Back to top" title="Back to top">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5.5 11.5 12 5l6.5 6.5"/></svg>
+</button>
+
 <script>
 const menuToggle=document.getElementById('menuToggle');
 const navLinks=document.getElementById('navLinks');
@@ -494,6 +515,17 @@ navLinks.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{
   menuToggle.setAttribute('aria-label','Open navigation');
   menuToggle.textContent='☰';
 }));
+
+const backToTop=document.getElementById('backToTop');
+const updateBackToTop=()=>{
+  backToTop.classList.toggle('visible',window.scrollY>300);
+};
+window.addEventListener('scroll',updateBackToTop,{passive:true});
+updateBackToTop();
+backToTop.addEventListener('click',()=>{
+  window.scrollTo({top:0,behavior:'smooth'});
+});
+
 </script>
 </body>
 </html>
