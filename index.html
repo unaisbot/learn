@@ -283,6 +283,21 @@ h1,h2,h3,h4,.fact-value,.nav-links a,.btn,.hero-kicker,.eyebrow,.section-heading
   right:20px;
   align-items:center;
 }
+
+/* Show all three floating buttons together only after the visitor scrolls */
+.floating-actions{
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  transform:translateY(12px);
+  transition:opacity .25s ease, transform .25s ease, visibility .25s ease;
+}
+.floating-actions.visible{
+  opacity:1;
+  visibility:visible;
+  pointer-events:auto;
+  transform:translateY(0);
+}
 .floating-actions .back-to-top{
   position:static;
   right:auto;bottom:auto;z-index:auto;
@@ -613,8 +628,11 @@ navLinks.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{
 }));
 
 const backToTop=document.getElementById('backToTop');
+const floatingActions=document.querySelector('.floating-actions');
 const updateBackToTop=()=>{
-  backToTop.classList.toggle('visible',window.scrollY>300);
+  const showActions=window.scrollY>300;
+  floatingActions.classList.toggle('visible',showActions);
+  backToTop.classList.toggle('visible',showActions);
 };
 window.addEventListener('scroll',updateBackToTop,{passive:true});
 updateBackToTop();
