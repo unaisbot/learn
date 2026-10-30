@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Five-day hybrid certificate course on Ecological Niche Modelling using MaxEnt, organised by TBARC in association with KAHM Unity Women's College.">
+<meta name="theme-color" content="#075333">
+<title>Certificate Course on Ecological Niche Modelling using MaxEnt | TBARC</title>
+<link rel="icon" type="image/png" href="images/favicon.png">
+<style>
+:root{
+  --green:#075333;--dark:#043b25;--deep:#022b1b;--light:#f0f6ef;
+  --pale:#e4efe3;--text:#202923;--muted:#626a63;--border:#e4ebe4;
+  --white:#fff;--gold:#d6b66a;--shadow:0 14px 38px rgba(4,59,37,.09);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:86px}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#fff;line-height:1.7}
+a{color:inherit}
+.site-header{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid var(--border)}
+.nav-container{max-width:1180px;margin:auto;padding:11px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;text-decoration:none;flex-shrink:0}
+.brand-logo{display:block;width:140px;height:42px;object-fit:contain;object-position:left center}
+.nav-links{display:flex;align-items:center;justify-content:flex-end;gap:23px}
+.nav-links a{font-size:12px;font-weight:700;text-decoration:none;color:#34463a;white-space:nowrap}
+.nav-links a:hover{color:var(--green)}
+.nav-cta{display:inline-flex;align-items:center;justify-content:center;padding:10px 17px;background:var(--green);color:#fff!important;border-radius:7px}
+.menu-toggle{display:none;border:1px solid var(--border);background:#fff;color:var(--green);border-radius:7px;padding:8px 11px;font-size:20px;cursor:pointer}
+.hero{position:relative;isolation:isolate;overflow:hidden;color:#fff;background:linear-gradient(90deg,rgba(1,35,20,.94),rgba(3,62,35,.78) 58%,rgba(3,50,29,.48)),url('images/hero.jpg') center/cover no-repeat}
+.hero:after{content:"";position:absolute;z-index:-1;width:420px;height:420px;border:1px solid #ffffff20;border-radius:50%;right:-100px;bottom:-260px;box-shadow:0 0 0 45px #ffffff08,0 0 0 90px #ffffff06}
+.hero-inner{max-width:1180px;margin:auto;padding:82px 24px 88px}
+.hero-kicker{display:inline-flex;align-items:center;gap:9px;padding:7px 14px;border:1px solid #ffffff55;background:#ffffff16;border-radius:30px;color:#f1f7f0;font-size:11px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;margin-bottom:22px}
+.hero-kicker:before{content:"";width:7px;height:7px;background:var(--gold);border-radius:50%}
+.hero h1{max-width:850px;margin:0 0 20px;font-size:clamp(36px,5.5vw,64px);line-height:1.1;letter-spacing:-1.8px}
+.hero h1 span{color:#d9e9d8}
+.hero-description{max-width:680px;margin:0;color:#e0ece2;font-size:16px;line-height:1.8}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 20px;border-radius:8px;text-decoration:none;font-size:13px;font-weight:800;transition:.2s}
+.btn-primary{background:#fff;color:var(--green)}
+.btn-primary:hover{background:#eaf2e9;transform:translateY(-2px)}
+.btn-outline{border:1px solid #ffffff8a;color:#fff;background:#ffffff0d}
+.btn-outline:hover{background:#ffffff20}
+.hero-partners{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:42px}
+.partner-logo{height:54px;max-width:145px;object-fit:contain;background:#fff;border-radius:8px;padding:7px 10px}
+.partner-caption{font-size:10px;color:#dce9de;letter-spacing:1px;text-transform:uppercase}
+.quick-facts-wrap{position:relative;z-index:2;margin-top:-34px;padding:0 22px}
+.quick-facts{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow);overflow:hidden}
+.fact{padding:21px 23px;display:flex;align-items:center;gap:13px;border-right:1px solid var(--border)}
+.fact:last-child{border-right:0}
+.fact-icon{width:42px;height:42px;flex:0 0 42px;display:grid;place-items:center;border-radius:11px;background:var(--light);color:var(--green);font-size:19px}
+.fact-label{display:block;color:var(--muted);font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase}
+.fact-value{display:block;color:var(--dark);font-size:13px;font-weight:800;line-height:1.4;margin-top:3px}
+.container{max-width:1120px;margin:auto;padding-left:24px;padding-right:24px}
+.section{padding:76px 0}
+.section.soft{background:#f7faf6}
+.section-heading{max-width:740px;margin:0 auto 38px;text-align:center}
+.eyebrow{margin:0 0 9px;color:var(--green);font-size:10px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase}
+.section-heading h2{margin:0 0 12px;color:var(--dark);font-size:clamp(27px,3.5vw,38px);line-height:1.2;letter-spacing:-.7px}
+.section-heading p{margin:0;color:var(--muted);font-size:14px}
+.section-title{margin:0 0 17px;color:var(--dark);font-size:25px;line-height:1.3}
+.body-copy{color:#505a52;font-size:14px;line-height:1.9;margin:0 0 14px;text-align:justify}
+.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:42px;align-items:center}
+.about-image{width:100%;height:380px;object-fit:cover;border-radius:16px;box-shadow:var(--shadow);background:var(--pale)}
+.image-caption{font-size:11px;color:var(--muted);margin-top:9px}
+.callout{display:flex;gap:14px;padding:19px 20px;margin-top:23px;background:var(--light);border-left:4px solid var(--green);border-radius:0 10px 10px 0}
+.callout-icon{font-size:23px;color:var(--green);flex:0 0 auto}
+.callout p{margin:0;color:#3d4d40;font-size:13px;line-height:1.7}
+.overview-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.overview-card{padding:25px 23px;border:1px solid var(--border);border-radius:13px;background:#fff;transition:.2s}
+.overview-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.overview-icon{width:48px;height:48px;display:grid;place-items:center;border-radius:12px;background:var(--light);color:var(--green);font-size:22px;margin-bottom:17px}
+.overview-card h3{font-size:16px;color:var(--dark);margin:0 0 9px}
+.overview-card p{font-size:12px;color:var(--muted);line-height:1.75;margin:0}
+.outcomes{margin-top:35px;padding:27px 30px;background:var(--deep);color:#fff;border-radius:14px}
+.outcomes h3{font-size:19px;margin:0 0 16px}
+.outcome-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px 26px}
+.outcome{display:flex;gap:10px;color:#e2eee4;font-size:12px;line-height:1.6}
+.outcome:before{content:"✓";color:#b9d7b9;font-weight:900}
+.schedule{max-width:850px;margin:auto;position:relative}
+.schedule:before{content:"";position:absolute;left:91px;top:18px;bottom:18px;width:2px;background:#dce8dc}
+.schedule-item{position:relative;display:grid;grid-template-columns:72px 1fr;gap:38px;padding:0 0 24px}
+.day-marker{position:relative;z-index:1;width:72px;height:72px;display:grid;place-items:center;background:var(--green);color:#fff;border:5px solid #eaf2e9;border-radius:50%;font-size:12px;font-weight:800;text-align:center;line-height:1.2}
+.day-content{padding:17px 21px;border:1px solid var(--border);border-radius:12px;background:#fff}
+.day-content h3{margin:0 0 6px;color:var(--dark);font-size:16px}
+.day-content p{margin:0;color:var(--muted);font-size:12px;line-height:1.7}
+.day-meta{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px;color:var(--green);font-size:10px;font-weight:800}
+.syllabus-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
+.module{display:flex;gap:16px;padding:20px;border:1px solid var(--border);border-radius:12px;background:#fff}
+.module-number{width:39px;height:39px;flex:0 0 39px;display:grid;place-items:center;background:var(--light);color:var(--green);border-radius:10px;font-size:13px;font-weight:900}
+.module h3{font-size:14px;color:var(--dark);margin:1px 0 6px}
+.module p{font-size:12px;color:var(--muted);line-height:1.65;margin:0}
+.syllabus-note{margin-top:20px;padding:15px 18px;background:#f7faf6;border-radius:9px;color:var(--muted);font-size:11px}
+.organisation-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.organisation-card{padding:28px;border:1px solid var(--border);border-radius:14px;background:#fff}
+.org-head{display:flex;align-items:center;gap:16px;margin-bottom:18px}
+.org-logo{width:70px;height:70px;object-fit:contain;padding:7px;border:1px solid var(--border);border-radius:10px;background:#fff}
+.org-head h3{margin:0;color:var(--dark);font-size:17px;line-height:1.35}
+.org-head span{display:block;color:var(--muted);font-size:10px;margin-top:4px}
+.organisation-card p{margin:0;color:#566057;font-size:12px;line-height:1.85;text-align:justify}
+.org-link{display:inline-flex;margin-top:17px;color:var(--green);font-size:12px;font-weight:800;text-decoration:none}
+.org-link:hover{text-decoration:underline}
+.register-band{padding:56px 24px;background:linear-gradient(115deg,var(--deep),var(--green));color:#fff;text-align:center}
+.register-band h2{margin:0 0 10px;font-size:clamp(25px,3.4vw,36px)}
+.register-band p{max-width:620px;margin:0 auto 22px;color:#e0ece2;font-size:13px}
+.register-band .btn{background:#fff;color:var(--green)}
+.footer{background:#bfd6c5;padding:36px 24px 18px}
+.footer-inner{max-width:1120px;margin:auto;display:grid;grid-template-columns:1.2fr .8fr 1fr;gap:40px}
+.footer-brand-row{display:flex;align-items:center;gap:14px;margin-bottom:12px}
+.footer-logo{width:65px;height:65px;object-fit:contain}
+.footer-brand{font-size:14px;font-weight:800;line-height:1.45;color:#202923;max-width:260px}
+.footer p,.footer a{font-size:12px;color:#34463a}
+.footer-links{display:flex;flex-direction:column;gap:7px}
+.footer-links a{text-decoration:none}
+.footer-links a:hover{text-decoration:underline}
+.footer-heading{font-size:14px;font-weight:800;margin:0 0 13px;color:#202923}
+.footer-bottom{max-width:1120px;margin:25px auto 0;padding-top:14px;border-top:1px solid #9db9a5;text-align:center}
+.footer-bottom p{margin:0;font-size:11px}
+@media(max-width:900px){
+ .nav-links{gap:12px}.nav-links a{font-size:11px}
+ .quick-facts{grid-template-columns:repeat(2,1fr)}
+ .fact:nth-child(2){border-right:0}.fact:nth-child(-n+2){border-bottom:1px solid var(--border)}
+ .about-grid{gap:25px}.overview-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:700px){
+ .nav-container{padding:9px 15px}.brand-logo{width:125px;height:38px}
+ .menu-toggle{display:block}.nav-links{display:none;position:absolute;top:59px;left:0;right:0;padding:15px 20px 20px;background:#fff;border-bottom:1px solid var(--border);box-shadow:0 12px 18px #0000000d;align-items:stretch;flex-direction:column;gap:0}
+ .nav-links.open{display:flex}.nav-links a{padding:11px 4px;font-size:13px}.nav-links .nav-cta{margin-top:8px;padding:12px}
+ .hero-inner{padding:65px 20px 76px}.hero h1{font-size:clamp(35px,9vw,49px);letter-spacing:-1px}.hero-description{font-size:14px}
+ .quick-facts-wrap{padding:0 14px;margin-top:-27px}.fact{padding:15px 13px;gap:9px}.fact-icon{width:36px;height:36px;flex-basis:36px;font-size:16px}.fact-value{font-size:11px}
+ .container{padding-left:18px;padding-right:18px}.section{padding:57px 0}
+ .about-grid{grid-template-columns:1fr}.about-image{height:260px;order:-1}
+ .overview-grid{grid-template-columns:1fr 1fr;gap:11px}.overview-card{padding:18px 15px}.overview-card h3{font-size:14px}
+ .outcome-list{grid-template-columns:1fr}.outcomes{padding:22px 20px}
+ .schedule:before{left:31px}.schedule-item{grid-template-columns:64px 1fr;gap:12px}.day-marker{width:64px;height:64px}
+ .day-content{padding:14px}.syllabus-grid{grid-template-columns:1fr}
+ .organisation-grid{grid-template-columns:1fr}
+ .footer-inner{grid-template-columns:1fr;gap:25px}
+}
+@media(max-width:390px){
+ .quick-facts{grid-template-columns:1fr}.fact{border-right:0;border-bottom:1px solid var(--border)!important}.fact:last-child{border-bottom:0!important}
+ .overview-grid{grid-template-columns:1fr}
+ .hero-actions .btn{width:100%}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="nav-container">
+    <a class="brand" href="https://tbarc.in" aria-label="TBARC India home"><img src="images/logo.png" alt="TBARC India" class="brand-logo"></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="#event-details">Event Details</a>
+      <a href="#about-event">About</a>
+      <a href="#overview">Overview</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#syllabus">Syllabus</a>
+      <a href="#organisers">Organisers</a>
+      <a class="nav-cta" href="#registration">Registration ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-kicker">Certificate Course</div>
+    <h1>5-Day Hybrid Certificate Course on <span>Ecological Niche Modelling using MaxEnt</span></h1>
+    <p class="hero-description">Build a foundation in ecological niche modelling and learn how species occurrence data and environmental variables can be used to understand and predict species distributions.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#registration">Register for the Course <span aria-hidden="true">→</span></a>
+      <a class="btn btn-outline" href="#syllabus">Explore Course Syllabus</a>
+    </div>
+    <div class="hero-partners">
+      <span class="partner-caption">Organised by</span>
+      <img class="partner-logo" src="images/logo.png" alt="TBARC India logo">
+      <span class="partner-caption">In association with</span>
+      <img class="partner-logo" src="images/unitylogo.png" alt="KAHM Unity Women's College logo">
+    </div>
+  </div>
+</section>
+
+<div class="quick-facts-wrap" id="event-details">
+  <div class="quick-facts">
+    <div class="fact"><div class="fact-icon">▦</div><div><span class="fact-label">Duration</span><span class="fact-value">5 Days</span></div></div>
+    <div class="fact"><div class="fact-icon">⌖</div><div><span class="fact-label">Mode</span><span class="fact-value">Hybrid</span></div></div>
+    <div class="fact"><div class="fact-icon">⌂</div><div><span class="fact-label">Venue</span><span class="fact-value">Online + Unity College</span></div></div>
+    <div class="fact"><div class="fact-icon">✧</div><div><span class="fact-label">Certification</span><span class="fact-value">Certificate Course</span></div></div>
+  </div>
+</div>
+
+<section class="section" id="about-event">
+  <div class="container">
+    <div class="about-grid">
+      <div>
+        <p class="eyebrow">About the event</p>
+        <h2 class="section-title">Explore the science behind species distributions</h2>
+        <p class="body-copy">Ecological Niche Modelling (ENM) is an important approach in ecology and biodiversity research. It uses species occurrence records and environmental variables to identify areas with suitable environmental conditions for a species. These models support the study of species distributions, habitat suitability, potential range shifts and ecological responses to environmental change.</p>
+        <p class="body-copy">This five-day hybrid certificate course introduces participants to the concepts, datasets and analytical workflow involved in ecological niche modelling using MaxEnt. The programme is designed to connect ecological understanding with geospatial data processing and model interpretation.</p>
+        <div class="callout"><div class="callout-icon">✦</div><p><strong>Learning approach:</strong> A combination of online learning and in-person practical training. Add the final delivery format and session split here once confirmed.</p></div>
+      </div>
+      <div>
+        <img class="about-image" src="images/maxent-course.jpg" alt="Ecological modelling and biodiversity research" onerror="this.onerror=null;this.src='images/hero.jpg'">
+        <div class="image-caption">Ecological niche modelling for biodiversity research and conservation planning</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section soft" id="overview">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Course overview</p>
+      <h2>From ecological concepts to habitat suitability maps</h2>
+      <p>Understand the key stages of an ecological niche modelling workflow using MaxEnt.</p>
+    </div>
+    <div class="overview-grid">
+      <article class="overview-card"><div class="overview-icon">⌕</div><h3>Occurrence Data</h3><p>Understand species occurrence records, data sources, coordinate formats and the preparation of presence data for modelling.</p></article>
+      <article class="overview-card"><div class="overview-icon">▧</div><h3>Environmental Predictors</h3><p>Explore environmental and bioclimatic variables, predictor selection and the preparation of raster datasets.</p></article>
+      <article class="overview-card"><div class="overview-icon">⌘</div><h3>Spatial Data Processing</h3><p>Learn the role of GIS in preparing, checking and managing spatial datasets for ecological modelling.</p></article>
+      <article class="overview-card"><div class="overview-icon">◈</div><h3>MaxEnt Modelling</h3><p>Become familiar with the MaxEnt modelling workflow, input preparation, model settings and output generation.</p></article>
+      <article class="overview-card"><div class="overview-icon">▥</div><h3>Model Evaluation</h3><p>Explore model evaluation, performance assessment and the interpretation of modelling outputs.</p></article>
+      <article class="overview-card"><div class="overview-icon">⌖</div><h3>Ecological Applications</h3><p>Discover how niche modelling can inform biodiversity assessment, invasive species research and conservation planning.</p></article>
+    </div>
+    <div class="outcomes">
+      <h3>What participants will learn</h3>
+      <div class="outcome-list">
+        <div class="outcome">Understand the fundamental concepts of ecological niche modelling.</div>
+        <div class="outcome">Prepare and organise species occurrence data.</div>
+        <div class="outcome">Work with environmental and bioclimatic predictor layers.</div>
+        <div class="outcome">Understand the workflow of MaxEnt modelling.</div>
+        <div class="outcome">Interpret habitat suitability maps and model outputs.</div>
+        <div class="outcome">Recognise applications of ENM in ecology and conservation.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="schedule">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Detailed schedule</p>
+      <h2>Five days of guided learning</h2>
+      <p>Replace the draft session titles and descriptions below with the confirmed programme schedule.</p>
+    </div>
+    <div class="schedule">
+      <article class="schedule-item"><div class="day-marker">DAY<br>01</div><div class="day-content"><h3>Foundations of Ecological Niche Modelling</h3><p>Introduction to ecological niches, species distribution patterns, ENM concepts, applications and the MaxEnt approach.</p><div class="day-meta"><span>SESSION TIME: To be announced</span><span>MODE: To be confirmed</span></div></div></article>
+      <article class="schedule-item"><div class="day-marker">DAY<br>02</div><div class="day-content"><h3>Species Occurrence Data and Environmental Variables</h3><p>Occurrence data sources, data cleaning, coordinate preparation, environmental variables and predictor selection.</p><div class="day-meta"><span>SESSION TIME: To be announced</span><span>MODE: To be confirmed</span></div></div></article>
+      <article class="schedule-item"><div class="day-marker">DAY<br>03</div><div class="day-content"><h3>GIS and Spatial Data Preparation</h3><p>Introduction to spatial datasets, raster preparation, projections, clipping, resolution and preparation of modelling inputs.</p><div class="day-meta"><span>SESSION TIME: To be announced</span><span>MODE: To be confirmed</span></div></div></article>
+      <article class="schedule-item"><div class="day-marker">DAY<br>04</div><div class="day-content"><h3>MaxEnt Model Development</h3><p>MaxEnt interface and workflow, model configuration, running models and generating habitat suitability outputs.</p><div class="day-meta"><span>SESSION TIME: To be announced</span><span>MODE: To be confirmed</span></div></div></article>
+      <article class="schedule-item"><div class="day-marker">DAY<br>05</div><div class="day-content"><h3>Model Evaluation, Interpretation and Applications</h3><p>Model evaluation and interpretation, understanding output maps, ecological applications and discussion of participant learning.</p><div class="day-meta"><span>SESSION TIME: To be announced</span><span>MODE: To be confirmed</span></div></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="section soft" id="syllabus">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Course syllabus</p>
+      <h2>Topics covered during the course</h2>
+      <p>A structured outline of the major themes. Detailed subtopics can be expanded as the final syllabus is approved.</p>
+    </div>
+    <div class="syllabus-grid">
+      <article class="module"><div class="module-number">01</div><div><h3>Introduction to Ecological Niche Modelling</h3><p>Ecological niche concepts; species distribution modelling; theoretical foundations; applications in ecology, biogeography and conservation.</p></div></article>
+      <article class="module"><div class="module-number">02</div><div><h3>Species Occurrence Data</h3><p>Occurrence data sources; data formats; coordinate validation; duplicate records; spatial filtering and data preparation.</p></div></article>
+      <article class="module"><div class="module-number">03</div><div><h3>Environmental Data and Predictor Selection</h3><p>Bioclimatic variables; environmental raster layers; variable selection; multicollinearity; resolution and extent.</p></div></article>
+      <article class="module"><div class="module-number">04</div><div><h3>GIS-Based Data Preparation</h3><p>Spatial reference systems; raster processing; clipping and masking; raster alignment; preparation of input files.</p></div></article>
+      <article class="module"><div class="module-number">05</div><div><h3>MaxEnt Model Development</h3><p>MaxEnt software; model inputs and settings; feature classes; regularisation; model execution and output generation.</p></div></article>
+      <article class="module"><div class="module-number">06</div><div><h3>Model Evaluation and Interpretation</h3><p>Model performance; evaluation metrics; response curves; variable contributions; suitability classes and map interpretation.</p></div></article>
+      <article class="module"><div class="module-number">07</div><div><h3>Applications in Ecological Research</h3><p>Habitat suitability assessment; invasive species research; climate change applications; conservation planning and decision support.</p></div></article>
+      <article class="module"><div class="module-number">08</div><div><h3>Practical Workflow and Discussion</h3><p>Integrated modelling workflow; common challenges; interpretation of outputs; research applications and participant discussion.</p></div></article>
+    </div>
+    <div class="syllabus-note">Note: This is a draft syllabus structure based on the course theme. Confirm the final topics, practical components and software requirements before publishing.</div>
+  </div>
+</section>
+
+<section class="section" id="organisers">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Organisers & collaborators</p>
+      <h2>About the organising institutions</h2>
+      <p>The institutions supporting this learning programme.</p>
+    </div>
+    <div class="organisation-grid">
+      <article class="organisation-card">
+        <div class="org-head"><img class="org-logo" src="images/logo.png" alt="TBARC logo"><div><h3>Tropical Biodiversity Action and Research Centre</h3><span>Organiser · TBARC India</span></div></div>
+        <p>Tropical Biodiversity Action and Research Centre (TBARC) is an organisation working to promote biodiversity research, conservation awareness and scientific engagement. Through training programmes, workshops, research initiatives and outreach activities, TBARC aims to connect students, researchers and communities with emerging themes and methods in biodiversity science.</p>
+        <a class="org-link" href="https://tbarc.in" target="_blank" rel="noopener">Visit TBARC website ↗</a>
+      </article>
+      <article class="organisation-card">
+        <div class="org-head"><img class="org-logo" src="images/unitylogo.png" alt="Unity Women's College logo"><div><h3>KAHM Unity Women's College</h3><span>Academic partner · Manjeri, Kerala</span></div></div>
+        <p>KAHM Unity Women's College, Manjeri, is the academic institution associated with this programme. Add the approved institutional profile here, including its academic departments, research activities and facilities relevant to the course.</p>
+        <a class="org-link" href="#" target="_blank" rel="noopener">College website link to be added ↗</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="register-band" id="registration">
+  <h2>Ready to explore ecological niche modelling?</h2>
+  <p>Join the five-day hybrid certificate course and develop your understanding of MaxEnt and its applications in ecological research.</p>
+  <a class="btn" href="https://forms.gle/ADD-YOUR-REGISTRATION-LINK" target="_blank" rel="noopener">Register Now <span aria-hidden="true">→</span></a>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand-row"><a href="https://tbarc.in"><img src="images/logo.png" class="footer-logo" alt="TBARC logo"></a><div class="footer-brand">Tropical Biodiversity Action and Research Centre</div></div>
+      <p>Promoting biodiversity research, conservation and scientific learning.</p>
+    </div>
+    <div><h3 class="footer-heading">Quick Links</h3><div class="footer-links"><a href="https://tbarc.in">TBARC India</a><a href="#about-event">About the Course</a><a href="#schedule">Course Schedule</a><a href="#syllabus">Syllabus</a><a href="#registration">Registration</a></div></div>
+    <div><h3 class="footer-heading">Contact</h3><div class="footer-links"><a href="mailto:tbarcindia@gmail.com">tbarcindia@gmail.com</a><a href="https://www.instagram.com/tbarcindia" target="_blank" rel="noopener">Instagram</a><a href="https://www.linkedin.com/company/tbarcindia" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.youtube.com/@tbarcindia" target="_blank" rel="noopener">YouTube</a></div></div>
+  </div>
+  <div class="footer-bottom"><p>© 2026 Tropical Biodiversity Action and Research Centre. All rights reserved.</p></div>
+</footer>
+<script>
+const menuToggle=document.getElementById('menuToggle');
+const navLinks=document.getElementById('navLinks');
+menuToggle.addEventListener('click',()=>{
+  const isOpen=navLinks.classList.toggle('open');
+  menuToggle.setAttribute('aria-expanded',String(isOpen));
+  menuToggle.setAttribute('aria-label',isOpen?'Close navigation':'Open navigation');
+  menuToggle.textContent=isOpen?'×':'☰';
+});
+navLinks.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{
+  navLinks.classList.remove('open');
+  menuToggle.setAttribute('aria-expanded','false');
+  menuToggle.setAttribute('aria-label','Open navigation');
+  menuToggle.textContent='☰';
+}));
+</script>
+</body>
+</html>
