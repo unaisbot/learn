@@ -9,8 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
 <title>Certificate Course on Ecological Niche Modelling using MaxEnt | TBARC</title>
-<link rel="icon" type="image/png" href="./images/favicon.png?v=2">
-<link rel="shortcut icon" type="image/png" href="./images/favicon.png?v=2">
+<link rel="icon" type="image/png" href="images/favicon.png">
 <style>
 :root{
   --green:#075333;--dark:#043b25;--deep:#022b1b;--light:#f0f6ef;
@@ -30,7 +29,7 @@ a{color:inherit}
 .nav-links a:hover{color:var(--green)}
 .nav-cta{display:inline-flex;align-items:center;justify-content:center;padding:10px 17px;background:var(--green);color:#fff!important;border-radius:7px}
 .menu-toggle{display:none;border:1px solid var(--border);background:#fff;color:var(--green);border-radius:7px;padding:8px 11px;font-size:20px;cursor:pointer}
-.hero{position:relative;isolation:isolate;overflow:hidden;color:#fff;background:linear-gradient(90deg,rgba(1,35,20,.94),rgba(3,62,35,.78) 58%,rgba(3,50,29,.48)),url('./images/heroenm.jpg') center/cover no-repeat}
+.hero{position:relative;isolation:isolate;overflow:hidden;color:#fff;background:linear-gradient(90deg,rgba(1,35,20,.94),rgba(3,62,35,.78) 58%,rgba(3,50,29,.48)),url('images/heroenm.jpg') center/cover no-repeat}
 .hero:after{content:"";position:absolute;z-index:-1;width:420px;height:420px;border:1px solid #ffffff20;border-radius:50%;right:-100px;bottom:-260px;box-shadow:0 0 0 45px #ffffff08,0 0 0 90px #ffffff06}
 .hero-inner{max-width:1180px;margin:auto;padding:82px 24px 88px}
 .hero-kicker{display:inline-flex;align-items:center;gap:9px;padding:7px 14px;border:1px solid #ffffff55;background:#ffffff16;border-radius:30px;color:#f1f7f0;font-size:11px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;margin-bottom:22px}
@@ -187,6 +186,28 @@ h1,h2,h3,h4,.fact-value,.nav-links a,.btn,.hero-kicker,.eyebrow,.section-heading
 .overview-icon .course-icon{width:23px;height:23px}
 .fact-icon,.overview-icon{line-height:0}
 
+
+/* Detailed schedule cards */
+.schedule{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px 22px;align-items:stretch}
+.schedule:before{display:none}
+.schedule-item{display:block;position:relative;padding:0;margin:0;min-width:0}
+.day-marker{display:none}
+.day-content{position:relative;height:100%;padding:39px 20px 19px;border:1px solid #198b50;border-radius:14px;background:#fff;box-shadow:none}
+.day-content:before{content:attr(data-session);position:absolute;top:-1px;left:-1px;right:22px;width:max-content;max-width:calc(100% + 1px);padding:9px 17px;background:#198b50;color:#fff;border-radius:12px;font-size:13px;font-weight:700;line-height:1.35}
+.day-content ul{margin:0;padding:0 0 0 18px;color:#294c85;font-size:13px;line-height:1.55}
+.day-content li{padding-left:1px;margin:3px 0}
+.schedule-item.offline .day-content{border-color:#bd9850}
+.schedule-item.offline .day-content:before{background:#9a742e}
+@media(max-width:900px){
+  .schedule{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 18px}
+}
+@media(max-width:600px){
+  .schedule{grid-template-columns:1fr;gap:20px}
+  .day-content{padding:38px 17px 16px}
+  .day-content:before{font-size:12px;padding:9px 15px}
+  .day-content ul{font-size:13px;line-height:1.55}
+}
+
 </style>
 </head>
 <body>
@@ -198,7 +219,7 @@ h1,h2,h3,h4,.fact-value,.nav-links a,.btn,.hero-kicker,.eyebrow,.section-heading
       <a href="#about-event">About</a>
       <a href="#schedule">Schedule</a>
       <a href="#syllabus">Syllabus</a>
-      <a class="nav-cta" href="https://forms.gle/vzrLGUi8QBXChzP68">Registration ↗</a>
+      <a class="nav-cta" href="#registration">Registration ↗</a>
     </nav>
   </div>
 </header>
@@ -240,7 +261,7 @@ h1,h2,h3,h4,.fact-value,.nav-links a,.btn,.hero-kicker,.eyebrow,.section-heading
         <div class="callout"><div class="callout-icon">✦</div><p><strong>Learning approach:</strong> A combination of online learning and in-person practical training. Add the final delivery format and session split here once confirmed.</p></div>
       </div>
       <div>
-        <img class="about-image" src="images/bodyenm.jpg" alt="Ecological modelling and biodiversity research">
+        <img class="about-image" src="images/maxent-course.jpg" alt="Ecological modelling and biodiversity research" onerror="this.onerror=null;this.src='images/hero.jpg'">
         <div class="image-caption">Ecological niche modelling for biodiversity research and conservation planning</div>
       </div>
     </div>
@@ -287,16 +308,54 @@ h1,h2,h3,h4,.fact-value,.nav-links a,.btn,.hero-kicker,.eyebrow,.section-heading
 
 <section class="section" id="schedule">
   <div class="container">
-    <div class="section-heading">
-      <p class="eyebrow">Detailed schedule</p>
-      <h2>Detailed Schedule</h2>
-    </div>
     <div class="schedule">
-      <article class="schedule-item"><div class="day-marker">DAY<br>01</div><div class="day-content"><h3>Foundations of Ecological Niche Modelling</h3><p>Introduction to ecological niches, species distribution patterns, ENM concepts, applications and the MaxEnt approach.</p><div class="day-meta"><span>SESSION TIME: To be announced</span><span>MODE: To be confirmed</span></div></div></article>
-      <article class="schedule-item"><div class="day-marker">DAY<br>02</div><div class="day-content"><h3>Species Occurrence Data and Environmental Variables</h3><p>Occurrence data sources, data cleaning, coordinate preparation, environmental variables and predictor selection.</p><div class="day-meta"><span>SESSION TIME: To be announced</span><span>MODE: To be confirmed</span></div></div></article>
-      <article class="schedule-item"><div class="day-marker">DAY<br>03</div><div class="day-content"><h3>GIS and Spatial Data Preparation</h3><p>Introduction to spatial datasets, raster preparation, projections, clipping, resolution and preparation of modelling inputs.</p><div class="day-meta"><span>SESSION TIME: To be announced</span><span>MODE: To be confirmed</span></div></div></article>
-      <article class="schedule-item"><div class="day-marker">DAY<br>04</div><div class="day-content"><h3>MaxEnt Model Development</h3><p>MaxEnt interface and workflow, model configuration, running models and generating habitat suitability outputs.</p><div class="day-meta"><span>SESSION TIME: To be announced</span><span>MODE: To be confirmed</span></div></div></article>
-      <article class="schedule-item"><div class="day-marker">DAY<br>05</div><div class="day-content"><h3>Model Evaluation, Interpretation and Applications</h3><p>Model evaluation and interpretation, understanding output maps, ecological applications and discussion of participant learning.</p><div class="day-meta"><span>SESSION TIME: To be announced</span><span>MODE: To be confirmed</span></div></div></article>
+      <article class="schedule-item">
+        <div class="day-content" data-session="Day 1 | Online | 7.30 PM to 9.30 PM">
+          <ul>
+            <li>Introduction to Ecological Niche Modeling.</li>
+            <li>Applications of ENM in biodiversity conservation, invasive species, climate change and restoration.</li>
+            <li>Discussion of published case studies and complete ENM workflow.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="schedule-item">
+        <div class="day-content" data-session="Day 2 | Online | 7.30 PM to 9.30 PM">
+          <ul>
+            <li>Installation and configuration of QGIS, RStudio and MaxEnt.</li>
+            <li>Downloading occurrence data (GBIF, iNaturalist).</li>
+            <li>Downloading environmental variables (WorldClim, CHELSA).</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="schedule-item">
+        <div class="day-content" data-session="Day 3 | Online | 7.30 PM to 9.30 PM">
+          <ul>
+            <li>Working with raster and vector data in QGIS.</li>
+            <li>Importing, cleaning and visualizing spatial datasets in R.</li>
+            <li>Preparation of study area and modelling inputs.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="schedule-item offline">
+        <div class="day-content" data-session="Day 4 | Offline | Hands-on training">
+          <ul>
+            <li>Occurrence data collection from field surveys and online repositories.</li>
+            <li>Environmental variable selection and multicollinearity assessment.</li>
+            <li>Running MaxEnt models.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="schedule-item offline">
+        <div class="day-content" data-session="Day 5 | Offline | Hands-on training">
+          <ul>
+            <li>Generation and interpretation of habitat suitability maps through an individual ENM case study.</li>
+          </ul>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -445,7 +504,7 @@ h1,h2,h3,h4,.fact-value,.nav-links a,.btn,.hero-kicker,.eyebrow,.section-heading
 <section class="register-band" id="registration">
   <h2>Ready to explore ecological niche modelling?</h2>
   <p>Join the five-day hybrid certificate course and develop your understanding of MaxEnt and its applications in ecological research.</p>
-  <a class="btn" href="https://forms.gle/vzrLGUi8QBXChzP68" target="_blank" rel="noopener">Register Now <span aria-hidden="true">→</span></a>
+  <a class="btn" href="https://forms.gle/ADD-YOUR-REGISTRATION-LINK" target="_blank" rel="noopener">Register Now <span aria-hidden="true">→</span></a>
 </section>
 </main>
 
