@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Five-day hybrid certificate course on Ecological Niche Modelling using MaxEnt, organised by TBARC in association with KAHM Unity Women's College.">
 <meta name="theme-color" content="#075333">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
 <title>Certificate Course on Ecological Niche Modelling using MaxEnt | TBARC</title>
 <link rel="icon" type="image/png" href="images/favicon.png">
 <style>
@@ -15,7 +18,7 @@
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:86px}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#fff;line-height:1.7}
+body{margin:0;font-family:"DM Sans", "Segoe UI", sans-serif;color:var(--text);background:#fff;line-height:1.75;font-size:15px;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 a{color:inherit}
 .site-header{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid var(--border)}
 .nav-container{max-width:1180px;margin:auto;padding:11px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
@@ -30,8 +33,8 @@ a{color:inherit}
 .hero:after{content:"";position:absolute;z-index:-1;width:420px;height:420px;border:1px solid #ffffff20;border-radius:50%;right:-100px;bottom:-260px;box-shadow:0 0 0 45px #ffffff08,0 0 0 90px #ffffff06}
 .hero-inner{max-width:1180px;margin:auto;padding:82px 24px 88px}
 .hero-kicker{display:inline-flex;align-items:center;gap:9px;padding:7px 14px;border:1px solid #ffffff55;background:#ffffff16;border-radius:30px;color:#f1f7f0;font-size:11px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;margin-bottom:22px}
-.hero-kicker:before{content:"";width:7px;height:7px;background:var(--gold);border-radius:50%}
-.hero h1{max-width:850px;margin:0 0 20px;font-size:clamp(36px,5.5vw,64px);line-height:1.1;letter-spacing:-1.8px}
+.hero-kicker:before{content:none}
+.hero-heading-row{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:38px}.hero-copy{min-width:0}.hero h1{max-width:850px;margin:0 0 20px;font-size:clamp(36px,5.5vw,64px);line-height:1.1;letter-spacing:-1.8px}.hero-logos{display:flex;flex-direction:column;align-items:center;gap:15px;min-width:150px}.hero-logos img{display:block;width:140px;height:75px;object-fit:contain;background:#fff;border-radius:9px;padding:9px 12px}
 .hero h1 span{color:#d9e9d8}
 .hero-description{max-width:680px;margin:0;color:#e0ece2;font-size:16px;line-height:1.8}
 .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
@@ -40,7 +43,7 @@ a{color:inherit}
 .btn-primary:hover{background:#eaf2e9;transform:translateY(-2px)}
 .btn-outline{border:1px solid #ffffff8a;color:#fff;background:#ffffff0d}
 .btn-outline:hover{background:#ffffff20}
-.hero-partners{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:42px}
+.hero-partners{display:none}
 .partner-logo{height:54px;max-width:145px;object-fit:contain;background:#fff;border-radius:8px;padding:7px 10px}
 .partner-caption{font-size:10px;color:#dce9de;letter-spacing:1px;text-transform:uppercase}
 .quick-facts-wrap{position:relative;z-index:2;margin-top:-34px;padding:0 22px}
@@ -71,7 +74,7 @@ a{color:inherit}
 .overview-icon{width:48px;height:48px;display:grid;place-items:center;border-radius:12px;background:var(--light);color:var(--green);font-size:22px;margin-bottom:17px}
 .overview-card h3{font-size:16px;color:var(--dark);margin:0 0 9px}
 .overview-card p{font-size:12px;color:var(--muted);line-height:1.75;margin:0}
-.outcomes{margin-top:35px;padding:27px 30px;background:var(--deep);color:#fff;border-radius:14px}
+.participant-tags{display:flex;flex-wrap:wrap;gap:9px}.participant-tags span{display:inline-flex;padding:8px 13px;border-radius:25px;background:var(--light);color:var(--green);font-size:11px;font-weight:700}.outcomes{margin-top:28px;padding:27px 30px;background:var(--deep);color:#fff;border-radius:14px}
 .outcomes h3{font-size:19px;margin:0 0 16px}
 .outcome-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px 26px}
 .outcome{display:flex;gap:10px;color:#e2eee4;font-size:12px;line-height:1.6}
@@ -122,6 +125,7 @@ a{color:inherit}
  .about-grid{gap:25px}.overview-grid{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:700px){
+ .hero-heading-row{grid-template-columns:1fr;gap:25px}.hero-logos{flex-direction:row;justify-content:flex-start;flex-wrap:wrap}.hero-logos img{width:112px;height:62px}
  .nav-container{padding:9px 15px}.brand-logo{width:125px;height:38px}
  .menu-toggle{display:block}.nav-links{display:none;position:absolute;top:59px;left:0;right:0;padding:15px 20px 20px;background:#fff;border-bottom:1px solid var(--border);box-shadow:0 12px 18px #0000000d;align-items:stretch;flex-direction:column;gap:0}
  .nav-links.open{display:flex}.nav-links a{padding:11px 4px;font-size:13px}.nav-links .nav-cta{margin-top:8px;padding:12px}
@@ -142,6 +146,46 @@ a{color:inherit}
  .hero-actions .btn{width:100%}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+
+/* Detailed syllabus layout */
+.course-objective{max-width:940px;margin:0 auto 28px;padding:24px 27px;background:#fff;border:1px solid var(--border);border-left:5px solid var(--green);border-radius:12px;box-shadow:0 7px 22px rgba(4,59,37,.045)}
+.course-objective h3{margin:0 0 8px;color:var(--dark);font-size:17px}
+.course-objective p{margin:0;color:#505a52;font-size:13px;line-height:1.85}
+.syllabus-days{max-width:940px;margin:auto;display:grid;gap:17px}
+.syllabus-day{padding:24px 26px;background:#fff;border:1px solid var(--border);border-radius:13px;box-shadow:0 7px 22px rgba(4,59,37,.035)}
+.syllabus-day-heading{display:flex;align-items:center;gap:15px;padding-bottom:17px;border-bottom:1px solid var(--border)}
+.syllabus-day-number{width:48px;height:48px;flex:0 0 48px;display:grid;place-items:center;background:var(--green);color:#fff;border-radius:12px;font-size:16px;font-weight:900}
+.syllabus-day-label{display:block;color:var(--green);font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;margin-bottom:3px}
+.syllabus-day-heading h3{margin:0;color:var(--dark);font-size:18px;line-height:1.35}
+.syllabus-columns{display:grid;grid-template-columns:1.25fr .85fr;gap:25px;padding-top:17px}
+.syllabus-columns h4{margin:0 0 9px;color:var(--green);font-size:12px;letter-spacing:.5px;text-transform:uppercase}
+.syllabus-columns ul{margin:0;padding-left:19px;color:#505a52;font-size:12px;line-height:1.8}
+.syllabus-columns li{padding-left:2px;margin-bottom:4px}
+.learning-outcomes{padding:15px 17px;background:#f4f8f3;border-radius:10px}
+.learning-outcomes ul{padding-left:17px}
+.prerequisites{max-width:940px;margin:22px auto 0;padding:20px 23px;display:flex;gap:15px;align-items:flex-start;background:#eaf3e9;border:1px solid #d9e8d9;border-radius:12px}
+.prerequisites-icon{width:34px;height:34px;flex:0 0 34px;display:grid;place-items:center;background:var(--green);color:#fff;border-radius:50%;font-weight:900}
+.prerequisites h3{margin:0 0 4px;color:var(--dark);font-size:15px}
+.prerequisites p{margin:0;color:#465448;font-size:12px;line-height:1.7}
+@media(max-width:700px){.syllabus-day{padding:19px 16px}.syllabus-day-heading h3{font-size:16px}.syllabus-columns{grid-template-columns:1fr;gap:16px}.learning-outcomes{padding:14px}.course-objective{padding:20px 18px}.prerequisites{padding:17px}}
+
+
+/* Typography refinement */
+h1,h2,h3,h4,.fact-value,.nav-links a,.btn,.hero-kicker,.eyebrow,.section-heading h2,.section-title,.syllabus-day-heading h3{
+  font-family:"Manrope","DM Sans","Segoe UI",sans-serif;
+}
+.hero h1{font-weight:800;letter-spacing:-1.5px}
+.section-heading h2,.section-title{font-weight:800;letter-spacing:-.6px}
+.body-copy{font-size:14px;line-height:1.95}
+.overview-card p,.syllabus-columns ul,.organisation-card p{font-size:13px;line-height:1.85}
+
+
+/* Custom inline SVG icons — consistent line weight and visual language */
+.course-icon{display:block;width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.fact-icon .course-icon{width:20px;height:20px}
+.overview-icon .course-icon{width:23px;height:23px}
+.fact-icon,.overview-icon{line-height:0}
+
 </style>
 </head>
 <body>
@@ -150,12 +194,9 @@ a{color:inherit}
     <a class="brand" href="https://tbarc.in" aria-label="TBARC India home"><img src="images/logo.png" alt="TBARC India" class="brand-logo"></a>
     <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
     <nav class="nav-links" id="navLinks" aria-label="Main navigation">
-      <a href="#event-details">Event Details</a>
       <a href="#about-event">About</a>
-      <a href="#overview">Overview</a>
       <a href="#schedule">Schedule</a>
       <a href="#syllabus">Syllabus</a>
-      <a href="#organisers">Organisers</a>
       <a class="nav-cta" href="#registration">Registration ↗</a>
     </nav>
   </div>
@@ -164,28 +205,26 @@ a{color:inherit}
 <main>
 <section class="hero">
   <div class="hero-inner">
-    <div class="hero-kicker">Certificate Course</div>
-    <h1>5-Day Hybrid Certificate Course on <span>Ecological Niche Modelling using MaxEnt</span></h1>
-    <p class="hero-description">Build a foundation in ecological niche modelling and learn how species occurrence data and environmental variables can be used to understand and predict species distributions.</p>
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="#registration">Register for the Course <span aria-hidden="true">→</span></a>
-      <a class="btn btn-outline" href="#syllabus">Explore Course Syllabus</a>
-    </div>
-    <div class="hero-partners">
-      <span class="partner-caption">Organised by</span>
-      <img class="partner-logo" src="images/logo.png" alt="TBARC India logo">
-      <span class="partner-caption">In association with</span>
-      <img class="partner-logo" src="images/unitylogo.png" alt="KAHM Unity Women's College logo">
+    <div class="hero-heading-row">
+      <div class="hero-copy">
+        <div class="hero-kicker">Certificate Course</div>
+        <h1>5-Day Hybrid Certificate Course on <span>Ecological Niche Modelling using MaxEnt</span></h1>
+        <p class="hero-description">Build a foundation in ecological niche modelling and learn how species occurrence data and environmental variables can be used to understand and predict species distributions.</p>
+      </div>
+      <div class="hero-logos" aria-label="Organising and collaborating institutions">
+        <img src="images/logo.png" alt="TBARC India logo">
+        <img src="images/unitylogo.png" alt="KAHM Unity Women's College logo">
+      </div>
     </div>
   </div>
 </section>
 
 <div class="quick-facts-wrap" id="event-details">
   <div class="quick-facts">
-    <div class="fact"><div class="fact-icon">▦</div><div><span class="fact-label">Duration</span><span class="fact-value">5 Days</span></div></div>
-    <div class="fact"><div class="fact-icon">⌖</div><div><span class="fact-label">Mode</span><span class="fact-value">Hybrid</span></div></div>
-    <div class="fact"><div class="fact-icon">⌂</div><div><span class="fact-label">Venue</span><span class="fact-value">Online + Unity College</span></div></div>
-    <div class="fact"><div class="fact-icon">✧</div><div><span class="fact-label">Certification</span><span class="fact-value">Certificate Course</span></div></div>
+    <div class="fact"><div class="fact-icon"><svg class="course-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="16" rx="2"/><path d="M7.5 3v4M16.5 3v4M3.5 10h17"/></svg></div><div><span class="fact-label">Date</span><span class="fact-value">8–13 December 2026</span></div></div>
+    <div class="fact"><div class="fact-icon"><svg class="course-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></div><div><span class="fact-label">Venue</span><span class="fact-value">Online + KAHM Unity Women's College, Manjeri</span></div></div>
+    <div class="fact"><div class="fact-icon"><svg class="course-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3.5 20v-1.5a5.5 5.5 0 0 1 11 0V20zM16 5.5a3 3 0 0 1 0 5.8M17 15h.5a3 3 0 0 1 3 3v2"/></svg></div><div><span class="fact-label">Number of Seats</span><span class="fact-value">To be announced</span></div></div>
+    <div class="fact"><div class="fact-icon"><svg class="course-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14M5 9h14M8 5c5 0 7 2 7 5s-2 5-7 5l8 6"/></svg></div><div><span class="fact-label">Fee Details</span><span class="fact-value">₹3,000</span></div></div>
   </div>
 </div>
 
@@ -194,7 +233,7 @@ a{color:inherit}
     <div class="about-grid">
       <div>
         <p class="eyebrow">About the event</p>
-        <h2 class="section-title">Explore the science behind species distributions</h2>
+        <h2 class="section-title">About the Course</h2>
         <p class="body-copy">Ecological Niche Modelling (ENM) is an important approach in ecology and biodiversity research. It uses species occurrence records and environmental variables to identify areas with suitable environmental conditions for a species. These models support the study of species distributions, habitat suitability, potential range shifts and ecological responses to environmental change.</p>
         <p class="body-copy">This five-day hybrid certificate course introduces participants to the concepts, datasets and analytical workflow involved in ecological niche modelling using MaxEnt. The programme is designed to connect ecological understanding with geospatial data processing and model interpretation.</p>
         <div class="callout"><div class="callout-icon">✦</div><p><strong>Learning approach:</strong> A combination of online learning and in-person practical training. Add the final delivery format and session split here once confirmed.</p></div>
@@ -211,19 +250,28 @@ a{color:inherit}
   <div class="container">
     <div class="section-heading">
       <p class="eyebrow">Course overview</p>
-      <h2>From ecological concepts to habitat suitability maps</h2>
-      <p>Understand the key stages of an ecological niche modelling workflow using MaxEnt.</p>
+      <h2>Course Overview</h2>
     </div>
     <div class="overview-grid">
-      <article class="overview-card"><div class="overview-icon">⌕</div><h3>Occurrence Data</h3><p>Understand species occurrence records, data sources, coordinate formats and the preparation of presence data for modelling.</p></article>
-      <article class="overview-card"><div class="overview-icon">▧</div><h3>Environmental Predictors</h3><p>Explore environmental and bioclimatic variables, predictor selection and the preparation of raster datasets.</p></article>
-      <article class="overview-card"><div class="overview-icon">⌘</div><h3>Spatial Data Processing</h3><p>Learn the role of GIS in preparing, checking and managing spatial datasets for ecological modelling.</p></article>
-      <article class="overview-card"><div class="overview-icon">◈</div><h3>MaxEnt Modelling</h3><p>Become familiar with the MaxEnt modelling workflow, input preparation, model settings and output generation.</p></article>
-      <article class="overview-card"><div class="overview-icon">▥</div><h3>Model Evaluation</h3><p>Explore model evaluation, performance assessment and the interpretation of modelling outputs.</p></article>
-      <article class="overview-card"><div class="overview-icon">⌖</div><h3>Ecological Applications</h3><p>Discover how niche modelling can inform biodiversity assessment, invasive species research and conservation planning.</p></article>
+      <article class="overview-card"><div class="overview-icon"><svg class="course-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5M8 10.8h5.6M10.8 8v5.6"/></svg></div><h3>Introduction to ENM and MaxEnt</h3><p>Introduction to Ecological Niche Modeling (ENM) and MaxEnt, ecological niche concepts and Species Distribution Models (SDMs).</p></article>
+      <article class="overview-card"><div class="overview-icon"><svg class="course-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4M7 8h4M7 12h8"/></svg></div><h3>Software Installation</h3><p>Installation and use of QGIS, R, RStudio, Java and MaxEnt.</p></article>
+      <article class="overview-card"><div class="overview-icon"><svg class="course-icon" viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v7c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12v7c0 1.7 3.6 3 8 3s8-1.3 8-3v-7"/></svg></div><h3>Data Acquisition</h3><p>Species occurrence and environmental data acquisition from relevant databases.</p></article>
+      <article class="overview-card"><div class="overview-icon"><svg class="course-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7.5 8.5 4 15 7l6-3v15l-6 3-6.5-3L3 22zM8.5 4v15M15 7v15"/></svg></div><h3>Spatial Data Processing</h3><p>Spatial data processing and GIS analysis using QGIS and R.</p></article>
+      <article class="overview-card"><div class="overview-icon"><svg class="course-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 9 5v10l-9 5-9-5V7z"/><path d="m3 7 9 5 9-5M12 12v10"/></svg></div><h3>MaxEnt Model Development</h3><p>MaxEnt model development, validation and habitat suitability mapping.</p></article>
+      <article class="overview-card"><div class="overview-icon"><svg class="course-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5M4 19h17"/><path d="m7 15 4-4 3 2 5-6"/></svg></div><h3>Future Projections and Learning Resources</h3><p>Future climate projections, case studies, lecture notes and tutorial videos.</p></article>
+    </div>
+    <div class="who-can-participate" style="margin-top:34px">
+      <h3 class="section-title" style="font-size:21px;margin-bottom:14px">Who Can Participate?</h3>
+      <div class="participant-tags">
+        <span>Undergraduate Students</span><span>Postgraduate Students</span>
+        <span>Diploma Students</span><span>Research Scholars</span>
+        <span>Researchers</span><span>Faculty Members</span>
+        <span>Ecology & Environmental Science</span><span>Forestry & Agriculture</span>
+        <span>Biodiversity & Conservation</span>
+      </div>
     </div>
     <div class="outcomes">
-      <h3>What participants will learn</h3>
+      <h3>What Participants Will Learn</h3>
       <div class="outcome-list">
         <div class="outcome">Understand the fundamental concepts of ecological niche modelling.</div>
         <div class="outcome">Prepare and organise species occurrence data.</div>
@@ -240,8 +288,7 @@ a{color:inherit}
   <div class="container">
     <div class="section-heading">
       <p class="eyebrow">Detailed schedule</p>
-      <h2>Five days of guided learning</h2>
-      <p>Replace the draft session titles and descriptions below with the confirmed programme schedule.</p>
+      <h2>Detailed Schedule</h2>
     </div>
     <div class="schedule">
       <article class="schedule-item"><div class="day-marker">DAY<br>01</div><div class="day-content"><h3>Foundations of Ecological Niche Modelling</h3><p>Introduction to ecological niches, species distribution patterns, ENM concepts, applications and the MaxEnt approach.</p><div class="day-meta"><span>SESSION TIME: To be announced</span><span>MODE: To be confirmed</span></div></div></article>
@@ -257,20 +304,118 @@ a{color:inherit}
   <div class="container">
     <div class="section-heading">
       <p class="eyebrow">Course syllabus</p>
-      <h2>Topics covered during the course</h2>
-      <p>A structured outline of the major themes. Detailed subtopics can be expanded as the final syllabus is approved.</p>
+      <h2>Detailed Course Syllabus</h2>
+      <p>A five-day learning programme combining theoretical sessions and practical training in ecological niche modelling.</p>
     </div>
-    <div class="syllabus-grid">
-      <article class="module"><div class="module-number">01</div><div><h3>Introduction to Ecological Niche Modelling</h3><p>Ecological niche concepts; species distribution modelling; theoretical foundations; applications in ecology, biogeography and conservation.</p></div></article>
-      <article class="module"><div class="module-number">02</div><div><h3>Species Occurrence Data</h3><p>Occurrence data sources; data formats; coordinate validation; duplicate records; spatial filtering and data preparation.</p></div></article>
-      <article class="module"><div class="module-number">03</div><div><h3>Environmental Data and Predictor Selection</h3><p>Bioclimatic variables; environmental raster layers; variable selection; multicollinearity; resolution and extent.</p></div></article>
-      <article class="module"><div class="module-number">04</div><div><h3>GIS-Based Data Preparation</h3><p>Spatial reference systems; raster processing; clipping and masking; raster alignment; preparation of input files.</p></div></article>
-      <article class="module"><div class="module-number">05</div><div><h3>MaxEnt Model Development</h3><p>MaxEnt software; model inputs and settings; feature classes; regularisation; model execution and output generation.</p></div></article>
-      <article class="module"><div class="module-number">06</div><div><h3>Model Evaluation and Interpretation</h3><p>Model performance; evaluation metrics; response curves; variable contributions; suitability classes and map interpretation.</p></div></article>
-      <article class="module"><div class="module-number">07</div><div><h3>Applications in Ecological Research</h3><p>Habitat suitability assessment; invasive species research; climate change applications; conservation planning and decision support.</p></div></article>
-      <article class="module"><div class="module-number">08</div><div><h3>Practical Workflow and Discussion</h3><p>Integrated modelling workflow; common challenges; interpretation of outputs; research applications and participant discussion.</p></div></article>
+
+    <div class="course-objective">
+      <h3>Course Objective</h3>
+      <p>Provide participants with theoretical knowledge and hands-on training in Ecological Niche Modeling (ENM) using MaxEnt, QGIS and R, enabling them to independently develop, evaluate and interpret species distribution models for conservation, ecology and climate change applications.</p>
     </div>
-    <div class="syllabus-note">Note: This is a draft syllabus structure based on the course theme. Confirm the final topics, practical components and software requirements before publishing.</div>
+
+    <div class="syllabus-days">
+      <article class="syllabus-day">
+        <div class="syllabus-day-heading"><div class="syllabus-day-number">01</div><div><span class="syllabus-day-label">Day 1 · 2 hours</span><h3>Fundamentals of Ecological Niche Modeling</h3></div></div>
+        <div class="syllabus-columns">
+          <div><h4>Topics Covered</h4><ul>
+            <li>Introduction to Ecological Niche Modeling (ENM)</li>
+            <li>Ecological niche concepts and Species Distribution Models (SDMs)</li>
+            <li>Overview of modelling approaches (presence-only, presence–absence, machine learning)</li>
+            <li>Introduction to MaxEnt: principles, assumptions, advantages and disadvantages</li>
+            <li>Applications of ENM in biodiversity conservation, invasive species, climate change and restoration</li>
+            <li>Limitations of ENM and situations where ENM should not be applied</li>
+            <li>Discussion of published case studies and complete ENM workflow</li>
+          </ul></div>
+          <div class="learning-outcomes"><h4>Learning Outcomes</h4><ul>
+            <li>Understand the concepts and workflow of ENM.</li>
+            <li>Differentiate modelling approaches and identify appropriate applications.</li>
+            <li>Recognize strengths and limitations of MaxEnt.</li>
+          </ul></div>
+        </div>
+      </article>
+
+      <article class="syllabus-day">
+        <div class="syllabus-day-heading"><div class="syllabus-day-number">02</div><div><span class="syllabus-day-label">Day 2 · 2 hours</span><h3>Software Installation and Data Acquisition</h3></div></div>
+        <div class="syllabus-columns">
+          <div><h4>Topics Covered</h4><ul>
+            <li>Introduction to spatial data: raster and vector</li>
+            <li>Installation and configuration of QGIS, R, RStudio, Java and MaxEnt</li>
+            <li>Downloading occurrence data (GBIF, iNaturalist, India Biodiversity Portal)</li>
+            <li>Downloading environmental variables (WorldClim, CHELSA and related databases)</li>
+            <li>Basic processing and management of spatial datasets</li>
+          </ul></div>
+          <div class="learning-outcomes"><h4>Learning Outcomes</h4><ul>
+            <li>Install and configure all required software.</li>
+            <li>Acquire and organize occurrence and environmental datasets.</li>
+            <li>Understand raster and vector data structures.</li>
+          </ul></div>
+        </div>
+      </article>
+
+      <article class="syllabus-day">
+        <div class="syllabus-day-heading"><div class="syllabus-day-number">03</div><div><span class="syllabus-day-label">Day 3 · 2 hours</span><h3>Spatial Data Processing Using QGIS and R</h3></div></div>
+        <div class="syllabus-columns">
+          <div><h4>Topics Covered</h4><ul>
+            <li>Working with raster and vector data in QGIS</li>
+            <li>Projection, clipping, buffering and extraction tools</li>
+            <li>Introduction to R and RStudio</li>
+            <li>Importing, cleaning and visualizing spatial datasets in R</li>
+            <li>Preparation of study area and modelling inputs</li>
+          </ul></div>
+          <div class="learning-outcomes"><h4>Learning Outcomes</h4><ul>
+            <li>Perform essential GIS operations.</li>
+            <li>Use basic R commands for ENM workflows.</li>
+            <li>Prepare datasets for modelling.</li>
+          </ul></div>
+        </div>
+      </article>
+
+      <article class="syllabus-day">
+        <div class="syllabus-day-heading"><div class="syllabus-day-number">04</div><div><span class="syllabus-day-label">Day 4 · 7 hours</span><h3>Building MaxEnt Models</h3></div></div>
+        <div class="syllabus-columns">
+          <div><h4>Topics Covered</h4><ul>
+            <li>Occurrence data collection from field surveys and online repositories</li>
+            <li>Data cleaning and spatial thinning</li>
+            <li>Environmental variable selection and multicollinearity assessment</li>
+            <li>Feature Classes and Regularization Multiplier selection</li>
+            <li>Running MaxEnt models</li>
+            <li>Interpreting response curves, jackknife analysis and habitat suitability maps</li>
+            <li>Theory and practical on model validation (AUC, ROC, Partial ROC, TSS, Cohen's Kappa, Sensitivity and Specificity)</li>
+            <li>Threshold selection and uncertainty</li>
+          </ul></div>
+          <div class="learning-outcomes"><h4>Learning Outcomes</h4><ul>
+            <li>Develop robust MaxEnt models.</li>
+            <li>Optimize model parameters.</li>
+            <li>Interpret model outputs correctly.</li>
+            <li>Evaluate model performance using standard metrics.</li>
+          </ul></div>
+        </div>
+      </article>
+
+      <article class="syllabus-day">
+        <div class="syllabus-day-heading"><div class="syllabus-day-number">05</div><div><span class="syllabus-day-label">Day 5 · Duration to be confirmed</span><h3>Future Projection, Mapping, Visualization and Case Study</h3></div></div>
+        <div class="syllabus-columns">
+          <div><h4>Topics Covered</h4><ul>
+            <li>Future climate projections</li>
+            <li>Habitat suitability map generation</li>
+            <li>Map layout preparation in QGIS</li>
+            <li>Visualization and interpretation of outputs</li>
+            <li>Individual case study</li>
+            <li>Participant presentation</li>
+          </ul></div>
+          <div class="learning-outcomes"><h4>Learning Outcomes</h4><ul>
+            <li>Generate future projections.</li>
+            <li>Produce publication-quality maps and visualizations.</li>
+            <li>Complete and present an ENM case study.</li>
+          </ul></div>
+        </div>
+      </article>
+    </div>
+
+    <div class="prerequisites">
+      <div class="prerequisites-icon">✓</div>
+      <div><h3>Prerequisites</h3><p>Basic knowledge of ecology, biodiversity or related life sciences. No prior experience in GIS, R or MaxEnt is required.</p></div>
+    </div>
   </div>
 </section>
 
